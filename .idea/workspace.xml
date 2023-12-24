@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="842dc9eb-3f89-4b96-87ee-30ae9c1ffcf1" name="Changes" comment="Dependency injection (part 2)">
+    <list default="true" id="842dc9eb-3f89-4b96-87ee-30ae9c1ffcf1" name="Changes" comment="Scope (singleton and prototype)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClassicalMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClassicalMusic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TestSpring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703432347776</updated>
-      <workItem from="1703432352042" duration="9596000" />
+      <workItem from="1703432352042" duration="12612000" />
     </task>
     <task id="LOCAL-00001" summary="Simple Spring project">
       <option name="closed" value="true" />
@@ -121,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703444101917</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Scope (singleton and prototype)">
+      <option name="closed" value="true" />
+      <created>1703446112152</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703446112152</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +154,7 @@
     <MESSAGE value="Show inversion of control (IoC)" />
     <MESSAGE value="Dependency injection (part 1)" />
     <MESSAGE value="Dependency injection (part 2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dependency injection (part 2)" />
+    <MESSAGE value="Scope (singleton and prototype)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scope (singleton and prototype)" />
   </component>
 </project>
