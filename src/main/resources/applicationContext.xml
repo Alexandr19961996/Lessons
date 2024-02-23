@@ -10,7 +10,7 @@
     <!-- .xml-конфигурация. -->
 
     <!-- Необходимая строка, когда при внедрении простых значений необходимо их внести в отдельный файл. -->
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+    <!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
 
     <!-- Описание всех beans, входящих в проект. -->
     <!--    <bean id="testBean"-->
@@ -71,19 +71,23 @@
     <!--    </bean>-->
 
     <!-- Демонстрация вызова init и destroy - methods. -->
-    <bean id="musicBean"
-          class="org.example.ClassicalMusic"
-          scope="prototype"
-          init-method="initMethod"
-          destroy-method="destroyMethod"
-          factory-method="getClassicalMusic">
-    </bean>
+    <!--    <bean id="musicBean"-->
+    <!--          class="org.example.ClassicalMusic"-->
+    <!--          scope="prototype"-->
+    <!--          init-method="initMethod"-->
+    <!--          destroy-method="destroyMethod"-->
+    <!--          factory-method="getClassicalMusic">-->
+    <!--    </bean>-->
 
     <!-- Демонстрация работы областей видимости Bean. -->
-    <bean id="musicPlayer"
-          class="org.example.MusicPlayer"
-          scope="prototype">
-        <constructor-arg ref="musicBean"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+    <!--    <bean id="musicPlayer"-->
+    <!--          class="org.example.MusicPlayer"-->
+    <!--          scope="prototype">-->
+    <!--        <constructor-arg ref="musicBean"/>-->
+    <!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+    <!--    </bean>-->
+
+    <!-- Демонстрация применения аннотаций. -->
+    <context:component-scan base-package="org.example"/>
+
 </beans>

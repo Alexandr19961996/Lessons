@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="842dc9eb-3f89-4b96-87ee-30ae9c1ffcf1" name="Changes" comment="Init-method, destroy-method and factory-method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/JazzMusic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TestBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="842dc9eb-3f89-4b96-87ee-30ae9c1ffcf1" name="Changes" comment="Summary">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MusicPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClassicalMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClassicalMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JazzMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/JazzMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RockMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RockMusic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TestSpring.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/musicPlayer.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/musicPlayer.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703432347776</updated>
       <workItem from="1703432352042" duration="32728000" />
-      <workItem from="1708399542604" duration="6511000" />
+      <workItem from="1708399542604" duration="9418000" />
     </task>
     <task id="LOCAL-00001" summary="Simple Spring project">
       <option name="closed" value="true" />
@@ -145,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703451541355</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Summary">
+      <option name="closed" value="true" />
+      <created>1708693681352</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708693681352</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +176,7 @@
     <MESSAGE value="Dependency injection (part 2)" />
     <MESSAGE value="Scope (singleton and prototype)" />
     <MESSAGE value="Init-method, destroy-method and factory-method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init-method, destroy-method and factory-method" />
+    <MESSAGE value="Summary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Summary" />
   </component>
 </project>

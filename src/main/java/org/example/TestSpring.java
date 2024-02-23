@@ -21,11 +21,11 @@ public class TestSpring {
 //        MusicPlayer musicPlayer = new MusicPlayer(music);
 //        musicPlayer.playMusic();
 
-//        // Dependency Injection.
+        // Dependency Injection.
 //        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 //        musicPlayer.playMusic();
 
-//        // Вывод простых значений.
+        // Вывод простых значений.
 //        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 //        System.out.println(musicPlayer.getName());
 //        System.out.println(musicPlayer.getVolume());
@@ -37,28 +37,40 @@ public class TestSpring {
         // Демонстрация работы scope (Singleton и Prototype).
 //        MusicPlayer firstMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 //        MusicPlayer secondMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-//
-//        // Сравнение двух Beans по указателю (на один ли участок памяти они указывают).
+
+        // Сравнение двух Beans по указателю (на один ли участок памяти они указывают).
 //        System.out.println(firstMusicPlayer == secondMusicPlayer);
-//        // Вывод хэш-значений (поскольку в классе MusicPlayer не переопределен метод toString) Bean "firstMusicPlayer".
+        // Вывод хэш-значений (поскольку в классе MusicPlayer не переопределен метод toString) Bean "firstMusicPlayer".
 //        System.out.println(firstMusicPlayer);
-//        // Вывод хэш-значений (поскольку в классе MusicPlayer не переопределен метод toString) Bean "secondMusicPlayer".
+        // Вывод хэш-значений (поскольку в классе MusicPlayer не переопределен метод toString) Bean "secondMusicPlayer".
 //        System.out.println(secondMusicPlayer);
-//
-//        // Изменение значений громкости у первого Bean и проверка прохода этого изменения у второго Bean
+
+        // Изменение значений громкости у первого Bean и проверка прохода этого изменения у второго Bean
 //        firstMusicPlayer.setVolume(10);
-//
+
 //        System.out.println("firstMusicPlayer: " + firstMusicPlayer.getVolume());
 //        System.out.println("secondMusicPlayer: " + secondMusicPlayer.getVolume());
 
         // Демонстрация вызова init и destroy methods. Для beans со scope = prototype не вызывается init-method.
         // При наличии factory-method и scope = singleton создание объекта будет произведено один раз.
-        ClassicalMusic classicalMusicOne = context.getBean("musicBean", ClassicalMusic.class);
-        ClassicalMusic classicalMusicTwo = context.getBean("musicBean", ClassicalMusic.class);
+//        ClassicalMusic classicalMusicOne = context.getBean("musicBean", ClassicalMusic.class);
+//        ClassicalMusic classicalMusicTwo = context.getBean("musicBean", ClassicalMusic.class);
+//
+//        System.out.println(classicalMusicOne.getSong());
+//        System.out.println(classicalMusicTwo.getSong());
 
+        // Аннотации. Демонстрация создания Beans при помощи @Component.
+        Music classicalMusic = context.getBean("classicalMusicBean", Music.class);
+        MusicPlayer musicPlayerOne = new MusicPlayer(classicalMusic);
+        musicPlayerOne.playMusic();
 
-        System.out.println(classicalMusicOne.getSong());
-        System.out.println(classicalMusicTwo.getSong());
+        Music roskMusic = context.getBean("rockMusicBean", Music.class);
+        MusicPlayer musicPlayerTwo = new MusicPlayer(roskMusic);
+        musicPlayerTwo.playMusic();
+
+        Music jazzMusic = context.getBean("jazzMusicBean", Music.class);
+        MusicPlayer musicPlayerThree = new MusicPlayer(jazzMusic);
+        musicPlayerThree.playMusic();
 
         context.close();
     }
