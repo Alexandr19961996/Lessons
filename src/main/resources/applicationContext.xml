@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- .xml-конфигурация. -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
@@ -6,22 +7,83 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- .xml-конфигурация. -->
 
+    <!-- Необходимая строка, когда при внедрении простых значений необходимо их внести в отдельный файл. -->
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
+    <!-- Описание всех beans, входящих в проект. -->
+    <!--    <bean id="testBean"-->
+    <!--          class="org.example.TestBean">-->
+    <!--        <constructor-arg value="Alex"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="musicBean"-->
+    <!--          class="org.example.JazzMusic">-->
+    <!--    </bean>-->
+
+    <!-- Dependency Injection через конструктор. -->
+    <!--    <bean id="musicPlayer"-->
+    <!--          class="org.example.MusicPlayer">-->
+    <!--        <constructor-arg ref="musicBean">-->
+    <!--        </constructor-arg>-->
+    <!--    </bean>-->
+
+    <!-- Демонстрация внедрения ссылок и простых значений. Когда таких значений много, удобно завести для них -->
+    <!-- отдельный файл. -->
+    <!-- Dependency Injection через setter. -->
+    <!--    <bean id="musicPlayer"-->
+    <!--          class="org.example.MusicPlayer">-->
+    <!--        <property name="music" ref="musicBean"/>-->
+
+    <!--        &lt;!&ndash; При внедрении простых чисел непрямую в коде. &ndash;&gt;-->
+    <!--        &lt;!&ndash;        <property name="name" value="Some name"/>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <property name="volume" value="50"/>&ndash;&gt;-->
+
+    <!--        &lt;!&ndash; При внедрении простых чисел непрямую в коде. &ndash;&gt;-->
+    <!--        <property name="name" value="${musicPlayer.name}"/>-->
+    <!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+    <!--    </bean>-->
+
+    <!-- Реализация задания: создание списка музыкальных песен разных жанров, внедрение зависимостей через
+    AC, запуск их в музыкальном плеере. -->
+    <!--    <bean id="classicalMusic"-->
+    <!--          class="org.example.ClassicalMusic">-->
+    <!--    </bean>-->
+
+    <!--    <bean id="jazzMusic"-->
+    <!--          class="org.example.JazzMusic">-->
+    <!--    </bean>-->
+
+    <!--    <bean id="rockMusic"-->
+    <!--          class="org.example.RockMusic">-->
+    <!--    </bean>-->
+
+    <!--    <bean id="musicPlayer"-->
+    <!--          class="org.example.MusicPlayer">-->
+    <!--        <property name="musicList">-->
+    <!--            <list>-->
+    <!--                <ref bean="classicalMusic"/>-->
+    <!--                <ref bean="jazzMusic"/>-->
+    <!--                <ref bean="rockMusic"/>-->
+    <!--            </list>-->
+    <!--        </property>-->
+    <!--    </bean>-->
+
+    <!-- Демонстрация вызова init и destroy - methods. -->
     <bean id="musicBean"
           class="org.example.ClassicalMusic"
+          scope="prototype"
           init-method="initMethod"
           destroy-method="destroyMethod"
           factory-method="getClassicalMusic">
     </bean>
 
-    <!--    <bean id="musicPlayer"-->
-    <!--          class="org.example.MusicPlayer"-->
-    <!--          scope="prototype">-->
-    <!--        <property name="music" ref="musicBean"/>-->
-    <!--        <property name="name" value="${musicPlayer.name}"/>-->
-    <!--        <property name="volume" value="${music.Player.volume}"/>-->
-    <!--    </bean>-->
-
+    <!-- Демонстрация работы областей видимости Bean. -->
+    <bean id="musicPlayer"
+          class="org.example.MusicPlayer"
+          scope="prototype">
+        <constructor-arg ref="musicBean"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
+    </bean>
 </beans>
