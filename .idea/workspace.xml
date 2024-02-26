@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="842dc9eb-3f89-4b96-87ee-30ae9c1ffcf1" name="Changes" comment="Annotations. @Component">
+    <list default="true" id="842dc9eb-3f89-4b96-87ee-30ae9c1ffcf1" name="Changes" comment="Annotations. @Autowiring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JazzMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/JazzMusic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MusicPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TestSpring.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703432347776</updated>
       <workItem from="1703432352042" duration="32728000" />
-      <workItem from="1708399542604" duration="15539000" />
+      <workItem from="1708399542604" duration="17292000" />
     </task>
     <task id="LOCAL-00001" summary="Simple Spring project">
       <option name="closed" value="true" />
@@ -171,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708701124319</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Annotations. @Autowiring">
+      <option name="closed" value="true" />
+      <created>1708975524271</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708975524271</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +204,7 @@
     <MESSAGE value="Init-method, destroy-method and factory-method" />
     <MESSAGE value="Summary" />
     <MESSAGE value="Annotations. @Component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Annotations. @Component" />
+    <MESSAGE value="Annotations. @Autowiring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Annotations. @Autowiring" />
   </component>
 </project>
