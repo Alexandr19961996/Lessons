@@ -60,17 +60,21 @@ public class TestSpring {
 //        System.out.println(classicalMusicTwo.getSong());
 
         // Аннотации. Демонстрация создания Beans при помощи @Component.
-        Music classicalMusic = context.getBean("classicalMusicBean", Music.class);
-        MusicPlayer musicPlayerOne = new MusicPlayer(classicalMusic);
-        musicPlayerOne.playMusic();
+//        Music classicalMusic = context.getBean("classicalMusicBean", Music.class);
+//        MusicPlayer musicPlayerOne = new MusicPlayer(classicalMusic);
+//        musicPlayerOne.playMusic();
+//
+//        Music roskMusic = context.getBean("rockMusicBean", Music.class);
+//        MusicPlayer musicPlayerTwo = new MusicPlayer(roskMusic);
+//        musicPlayerTwo.playMusic();
+//
+//        Music jazzMusic = context.getBean("jazzMusicBean", Music.class);
+//        MusicPlayer musicPlayerThree = new MusicPlayer(jazzMusic);
+//        musicPlayerThree.playMusic();
 
-        Music roskMusic = context.getBean("rockMusicBean", Music.class);
-        MusicPlayer musicPlayerTwo = new MusicPlayer(roskMusic);
-        musicPlayerTwo.playMusic();
-
-        Music jazzMusic = context.getBean("jazzMusicBean", Music.class);
-        MusicPlayer musicPlayerThree = new MusicPlayer(jazzMusic);
-        musicPlayerThree.playMusic();
+        // Аннотации. Демонстрация использования @Autowiring.
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+        musicPlayer.playMusic();
 
         context.close();
     }
